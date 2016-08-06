@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejercicio del video 11 de Vuejs</title>
+  <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+  <form @submit.prevent="enviarDatos(personas.nombre, personas.ciudad, personas.direccion)">
+    <input type="text" v-model="personas.nombre" name="nombre" placeholder="Escribe tu nombre" value="">
+    <input type="text" v-model="personas.ciudad" name="ciudad" placeholder="Escribe tu ciudad" value="">
+    <input type="textarea" v-model="personas.direccion" v-if="check" name="direccion" placeholder="Escribe tu direccion" value="">
+    <input v-model="check" type="checkbox" name="name" value="">
+    <label>¿Añadir una dirección?</label>
+    <button type="submit" name="button">Enviar</button>
+  </form>
+  <pre>
+    {{$data | json}}
+  </pre>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

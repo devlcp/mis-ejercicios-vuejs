@@ -1,0 +1,13 @@
+input, button {
+  display: block;
+  margin-bottom: 10px;
+  width: 200px;
+}
+input[type=textarea]{
+  height: 100px;
+}
+
+input[type=checkbox]{
+  display: inline-block;
+  width: auto;
+}
