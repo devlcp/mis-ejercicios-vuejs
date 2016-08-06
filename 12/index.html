@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 12: Vue Resource</title>
+    <link rel="stylesheet" href="global.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <input type="text" v-model="busqueda" placeholder="Busca una tarea">
+    <ul>
+      <li v-for="tarea in tareas | filterBy busqueda">
+        <input v-model="tarea.completed" type="checkbox">
+        <label>{{tarea.title | capitalize}}</label>
+      </li>
+    </ul>
+
+<!--
+    <pre>
+      {{ $data | json}}
+    </pre>
+-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.9.3/vue-resource.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
